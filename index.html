@@ -2,13 +2,35 @@
 <html lang="nl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>U16 Trainer Dashboard</title>
 <style>
 :root{--bg:#0f1419;--panel:#182129;--panel2:#202b35;--line:#30404d;--text:#f2f5f7;--muted:#9eabb5;--green:#6bc442;--red:#e75b5b;--yellow:#e9c34f}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
-.app{display:flex;min-height:100vh}.side{width:230px;background:#0b1014;border-right:1px solid var(--line);padding:24px 14px;position:fixed;inset:0 auto 0 0}.brand{font-weight:800;font-size:20px;padding:0 12px 26px}.brand span{color:var(--green)}.nav button{width:100%;background:none;border:0;color:#c6d0d7;text-align:left;padding:13px 14px;border-radius:9px;font-size:14px;cursor:pointer;margin:2px 0}.nav button.active,.nav button:hover{background:#1a2820;color:var(--green)}.main{margin-left:230px;width:calc(100% - 230px);padding:30px;max-width:1500px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}.title h1{margin:0;font-size:30px}.title p{margin:6px 0;color:var(--muted)}.actions{display:flex;gap:8px}.btn{border:1px solid var(--line);background:var(--panel);color:var(--text);padding:10px 15px;border-radius:8px;cursor:pointer;font-weight:600}.btn.primary{background:var(--green);border-color:var(--green);color:#081006}.btn.danger{color:#fff;border-color:#633b3b}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}.kpi .label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}.kpi .value{font-size:28px;font-weight:800;margin-top:8px}.section{margin-top:20px}.section h2{font-size:17px;margin:0 0 12px}.tablewrap{overflow:auto}.table{width:100%;border-collapse:collapse}.table th{font-size:11px;color:var(--muted);text-align:left;text-transform:uppercase;padding:11px 10px;border-bottom:1px solid var(--line)}.table td{padding:11px 10px;border-bottom:1px solid #27333d;font-size:14px}.table tr:last-child td{border-bottom:0}select,input{background:#11181e;color:var(--text);border:1px solid var(--line);border-radius:7px;padding:8px 9px;width:100%;outline:none}input:focus,select:focus{border-color:var(--green)}.formgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.field label{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.notice{padding:12px 14px;background:#18271c;border:1px solid #35552d;color:#cceac0;border-radius:8px;margin-bottom:14px}.empty{color:var(--muted);padding:20px 0}.pill{display:inline-block;padding:4px 8px;border-radius:20px;background:#25313a;font-size:12px}.green{color:var(--green)}.red{color:var(--red)}.yellow{color:var(--yellow)}.hidden{display:none!important}
-@media(max-width:900px){.side{width:70px}.brand{font-size:0}.brand span{font-size:18px}.nav button{font-size:0;text-align:center}.main{margin-left:70px;width:calc(100% - 70px);padding:18px}.grid{grid-template-columns:repeat(2,1fr)}.formgrid{grid-template-columns:1fr}}
+.app{display:flex;min-height:100vh}.side{width:230px;background:#0b1014;border-right:1px solid var(--line);padding:24px 14px;position:fixed;inset:0 auto 0 0}.brand{font-weight:800;font-size:20px;padding:0 12px 26px}.brand span{color:var(--green)}.nav {display:flex;flex-direction:column;gap:4px}.nav button{width:100%;background:none;border:0;color:#c6d0d7;text-align:left;padding:13px 14px;border-radius:9px;font-size:14px;cursor:pointer;margin:0}.nav button.active,.nav button:hover{background:#1a2820;color:var(--green)}.main{margin-left:230px;width:calc(100% - 230px);padding:30px;max-width:1500px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}.title h1{margin:0;font-size:30px}.title p{margin:6px 0;color:var(--muted)}.actions{display:flex;gap:8px}.btn{border:1px solid var(--line);background:var(--panel);color:var(--text);padding:10px 15px;border-radius:8px;cursor:pointer;font-weight:600}.btn.primary{background:var(--green);border-color:var(--green);color:#081006}.btn.danger{color:#fff;border-color:#633b3b}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}.kpi .label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}.kpi .value{font-size:28px;font-weight:800;margin-top:8px}.section{margin-top:20px}.section h2{font-size:17px;margin:0 0 12px}.tablewrap{overflow:auto}.table{width:100%;border-collapse:collapse}.table th{font-size:11px;color:var(--muted);text-align:left;text-transform:uppercase;padding:11px 10px;border-bottom:1px solid var(--line)}.table td{padding:11px 10px;border-bottom:1px solid #27333d;font-size:14px}.table tr:last-child td{border-bottom:0}select,input{background:#11181e;color:var(--text);border:1px solid var(--line);border-radius:7px;padding:8px 9px;width:100%;outline:none;-webkit-appearance:none}input:focus,select:focus{border-color:var(--green)}.formgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.field label{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.notice{padding:12px 14px;background:#18271c;border:1px solid #35552d;color:#cceac0;border-radius:8px;margin-bottom:14px}.empty{color:var(--muted);padding:20px 0}.pill{display:inline-block;padding:4px 8px;border-radius:20px;background:#25313a;font-size:12px}.green{color:var(--green)}.red{color:var(--red)}.yellow{color:var(--yellow)}.hidden{display:none!important}
+.playerlist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.playerlist li{display:flex;justify-content:space-between;align-items:center;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.playerlist li button{background:none;border:1px solid #633b3b;color:var(--red);border-radius:6px;padding:5px 10px;cursor:pointer;font-size:12px}
+.histblock{border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px;background:var(--panel2)}
+.histblock h3{margin:0 0 4px;font-size:15px}
+.histblock .sub{color:var(--muted);font-size:12px;margin-bottom:8px}
+.histblock button{background:none;border:1px solid #633b3b;color:var(--red);border-radius:6px;padding:5px 10px;cursor:pointer;font-size:12px}
+
+/* REPARATIE VOOR SMARTPHONES EN TABLETS */
+@media(max-width:900px){
+  .app{flex-direction:column}
+  .side{width:100%;height:60px;position:fixed;inset:auto 0 0 0;z-index:9999;background:#0b1014;border-right:0;border-top:1px solid var(--line);padding:5px 10px;display:flex;align-items:center;justify-content:center}
+  .brand{display:none}
+  .nav{flex-direction:row;width:100%;justify-content:space-around;gap:2px}
+  .nav button{font-size:11px;padding:8px 4px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;line-height:1}
+  .main{margin-left:0;width:100%;padding:15px;padding-bottom:80px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .formgrid{grid-template-columns:1fr}
+  .top{flex-direction:column;align-items:flex-start;gap:12px}
+  .actions{width:100%;justify-content:space-between}
+  .btn{padding:8px 12px;font-size:13px}
+  select,input{font-size:16px} /* Voorkomt dat iOS onnodig inzoomt bij invoer */
+}
 </style>
 </head>
 <body>
@@ -16,11 +38,11 @@
 <aside class="side">
   <div class="brand">U16 <span>TRAINER</span></div>
   <div class="nav">
-    <button data-tab="dashboard" class="active">▦ &nbsp; Dashboard</button>
-    <button data-tab="training">◷ &nbsp; Training invoeren</button>
-    <button data-tab="match">⚽ &nbsp; Wedstrijd invoeren</button>
-    <button data-tab="players">♙ &nbsp; Spelers</button>
-    <button data-tab="history">☷ &nbsp; Historie</button>
+    <button data-tab="dashboard" class="active">▦ <span>Dashboard</span></button>
+    <button data-tab="training">◷ <span>Training</span></button>
+    <button data-tab="match">⚽ <span>Wedstrijd</span></button>
+    <button data-tab="players">♙ <span>Spelers</span></button>
+    <button data-tab="history">☷ <span>Historie</span></button>
   </div>
 </aside>
 <main class="main">
@@ -35,17 +57,71 @@
 <script>
 const KEY="u16trainer_v1";
 let db=JSON.parse(localStorage.getItem(KEY)||'null')||{players:[],trainings:[],matches:[]};
-function save(){localStorage.setItem(KEY,JSON.stringify(db));render();}
-function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+
+document.querySelectorAll('.nav button').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    switchTab(this.getAttribute('data-tab'));
+  });
+});
+
+function switchTab(tab) {
+  const title = document.getElementById('pageTitle');
+  const sub = document.getElementById('pageSub');
+  const content = document.getElementById('content');
+
+  if(tab === 'dashboard') {
+    title.innerText = "Dashboard";
+    sub.innerText = "Overzicht van je U16-selectie";
+    content.innerHTML = dashboard();
+  } else if(tab === 'training') {
+    title.innerText = "Training invoeren";
+    sub.innerText = "Houd de aanwezigheid bij";
+    content.innerHTML = training();
+  } else if(tab === 'match') {
+    title.innerText = "Wedstrijd invoeren";
+    sub.innerText = "Voer wedstrijdstatistieken in";
+    content.innerHTML = match();
+  } else if(tab === 'players') {
+    title.innerText = "Spelersbeheer";
+    sub.innerText = "Beheer je selectie";
+    content.innerHTML = playersTab();
+  } else if(tab === 'history') {
+    title.innerText = "Historie";
+    sub.innerText = "Eerdere trainingen en wedstrijden";
+    content.innerHTML = historyTab();
+  }
+}
+
+function save(){ localStorage.setItem(KEY, JSON.stringify(db)); render(); }
+function render(){
+  const activeBtn = document.querySelector('.nav button.active');
+  if(activeBtn) switchTab(activeBtn.getAttribute('data-tab'));
+}
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function pct(n){return n?Math.round(n*100):0}
+
 function stats(p){
  const tr=db.trainings.filter(x=>x.player===p.name);
  const ms=db.matches.filter(x=>x.player===p.name);
  const attended=tr.filter(x=>x.status==="Aanwezig"||x.status==="Te laat").length;
- return {att:tr.length?attended/tr.length:0,min:ms.reduce((a,x)=>a+(+x.minutes||0),0),base:ms.filter(x=>x.status==="Basis").length,sub:ms.filter(x=>x.status==="Invaller").length,games:ms.filter(x=>x.status!=="Niet gespeeld").length,goals:ms.reduce((a,x)=>a+(+x.goals||0),0),assists:ms.reduce((a,x)=>a+(+x.assists||0),0),yellow:ms.reduce((a,x)=>a+(+x.yellow||0),0),red:ms.reduce((a,x)=>a+(+x.red||0),0)}
+ return {
+  att: tr.length ? attended/tr.length : 0,
+  min: ms.reduce((a,x)=>a+(+x.minutes||0),0),
+  base: ms.filter(x=>x.status==="Basis").length,
+  sub: ms.filter(x=>x.status==="Invaller").length,
+  games: ms.filter(x=>x.status!=="Niet gespeeld").length,
+  goals: ms.reduce((a,x)=>a+(+x.goals||0),0),
+  assists: ms.reduce((a,x)=>a+(+x.assists||0),0),
+  yellow: ms.reduce((a,x)=>a+(+x.yellow||0),0),
+  red: ms.reduce((a,x)=>a+(+x.red||0),0)
+ };
 }
+
 function dashboard(){
- const ss=db.players.map(stats); const avg=ss.length?ss.reduce((a,x)=>a+x.att,0)/ss.length:0;
+ const ss=db.players.map(stats);
+ const avg=ss.length?ss.reduce((a,x)=>a+x.att,0)/ss.length:0;
  return `<div class="grid">
  <div class="card kpi"><div class="label">Spelers</div><div class="value">${db.players.length}</div></div>
  <div class="card kpi"><div class="label">Gem. aanwezigheid</div><div class="value">${pct(avg)}%</div></div>
@@ -56,45 +132,161 @@ function dashboard(){
  ${db.players.map((p,i)=>{let s=ss[i];return `<tr><td><b>${esc(p.name)}</b></td><td class="green">${pct(s.att)}%</td><td>${s.min}</td><td>${s.base}</td><td>${s.sub}</td><td>${s.games}</td><td>${s.goals}</td><td>${s.assists}</td><td><span class="yellow">${s.yellow} geel</span> / <span class="red">${s.red} rood</span></td></tr>`}).join('')||'<tr><td colspan="9" class="empty">Voeg eerst spelers toe.</td></tr>'}
  </tbody></table></div></div>`;
 }
+
 function training(){
  const d=new Date().toISOString().slice(0,10);
- return `<div class="notice">Je hoeft hier <b>niet elke training een nieuwe kolom</b> te maken. Kies de datum, vul de status per speler in en druk één keer op <b>Training opslaan</b>. De oude gegevens worden automatisch bewaard en opgeteld.</div>
+ return `<div class="notice">Je hoeft hier <b>niet elke training een nieuwe kolom</b> te maken. Kies de datum, vul de status per speler in en druk één keer op <b>Training opslaan</b>.</div>
  <div class="card"><div class="formgrid"><div class="field"><label>Datum</label><input id="trDate" type="date" value="${d}"></div><div></div><div></div></div>
  <div class="section"><table class="table"><thead><tr><th>Speler</th><th>Status</th><th>Reden / opmerking</th></tr></thead><tbody>
  ${db.players.map((p,i)=>`<tr><td><b>${esc(p.name)}</b></td><td><select id="trStatus${i}"><option>Aanwezig</option><option>Te laat</option><option>Afwezig</option><option>Afwezig met reden</option></select></td><td><input id="trNote${i}" placeholder="optioneel"></td></tr>`).join('')||'<tr><td colspan="3" class="empty">Voeg eerst spelers toe via Spelers.</td></tr>'}
  </tbody></table></div><div class="section"><button class="btn primary" onclick="saveTraining()">✓ Training opslaan</button></div></div>`;
 }
+
 function match(){
- return `<div class="notice">Ook hier werk je met <b>één vast invoerscherm</b>. Je vult de wedstrijd in, slaat hem op en de totalen per speler worden automatisch bijgewerkt.</div>
- <div class="card"><div class="formgrid"><div class="field"><label>Datum</label><input id="mDate" type="date" value="${new Date().toISOString().slice(0,10)}"></div><div class="field"><label>Tegenstander</label><input id="mOpp" placeholder="Bijv. FC Utrecht U16"></div><div class="field"><label>Wedstrijd</label><input id="mLabel" placeholder="Competitie / oefenwedstrijd"></div></div>
- <div class="section"><table class="table"><thead><tr><th>Speler</th><th>Status</th><th>Min.</th><th>Goals</th><th>Assists</th><th>Geel</th><th>Rood</th></tr></thead><tbody>
- ${db.players.map((p,i)=>`<tr><td><b>${esc(p.name)}</b></td><td><select id="mStatus${i}"><option>Basis</option><option>Invaller</option><option>Niet gespeeld</option></select></td><td><input id="mMin${i}" type="number" min="0" value="0"></td><td><input id="mGoals${i}" type="number" min="0" value="0"></td><td><input id="mAssists${i}" type="number" min="0" value="0"></td><td><input id="mYellow${i}" type="number" min="0" value="0"></td><td><input id="mRed${i}" type="number" min="0" value="0"></td></tr>`).join('')||'<tr><td colspan="7" class="empty">Voeg eerst spelers toe via Spelers.</td></tr>'}
- </tbody></table></div><div class="section"><button class="btn primary" onclick="saveMatch()">✓ Wedstrijd opslaan</button></div></div>`;
+ const d=new Date().toISOString().slice(0,10);
+ return `<div class="notice">Vul de wedstrijdgegevens in en de statistieken per speler, en druk één keer op <b>Wedstrijd opslaan</b>.</div>
+ <div class="card">
+ <div class="formgrid">
+  <div class="field"><label>Datum</label><input id="mDate" type="date" value="${d}"></div>
+  <div class="field"><label>Tegenstander</label><input id="mOpponent" placeholder="Naam tegenstander"></div>
+  <div class="field"><label>Wedstrijd</label><input id="mComp" placeholder="Bijv. competitie / beker / oefen"></div>
+ </div>
+ <div class="section"><div class="tablewrap"><table class="table"><thead><tr><th>Speler</th><th>Status</th><th>Min.</th><th>Goals</th><th>Assists</th><th>Geel</th><th>Rood</th></tr></thead><tbody>
+ ${db.players.map((p,i)=>`<tr><td><b>${esc(p.name)}</b></td><td><select id="mStatus${i}"><option>Basis</option><option>Invaller</option><option>Niet gespeeld</option></select></td><td><input type="number" min="0" id="mMin${i}" value="0"></td><td><input type="number" min="0" id="mG${i}" value="0"></td><td><input type="number" min="0" id="mA${i}" value="0"></td><td><input type="number" min="0" id="mY${i}" value="0"></td><td><input type="number" min="0" id="mR${i}" value="0"></td></tr>`).join('')||'<tr><td colspan="7" class="empty">Voeg eerst spelers toe.</td></tr>'}
+ </tbody></table></div></div>
+ <div class="section"><button class="btn primary" onclick="saveMatch()">✓ Wedstrijd opslaan</button></div>
+ </div>`;
 }
-function players(){
- return `<div class="card"><h2>Spelers beheren</h2><div class="formgrid"><div class="field"><label>Nieuwe speler</label><input id="newPlayer" placeholder="Naam speler"></div><div class="field"><label>&nbsp;</label><button class="btn primary" onclick="addPlayer()">+ Speler toevoegen</button></div></div>
- <div class="section"><table class="table"><thead><tr><th>Naam</th><th>Positie</th><th>Verwijderen</th></tr></thead><tbody>${db.players.map((p,i)=>`<tr><td><b>${esc(p.name)}</b></td><td><select onchange="db.players[${i}].position=this.value;save()"><option ${p.position==="Keeper"?'selected':''}>Keeper</option><option ${p.position==="Verdediger"?'selected':''}>Verdediger</option><option ${p.position==="Middenvelder"?'selected':''}>Middenvelder</option><option ${p.position==="Aanvaller"?'selected':''}>Aanvaller</option></select></td><td><button class="btn" onclick="removePlayer(${i})">Verwijder</button></td></tr>`).join('')||'<tr><td colspan="3" class="empty">Nog geen spelers.</td></tr>'}</tbody></table></div></div>`;
+
+function playersTab(){
+ return `<div class="card"><h2>Speler toevoegen</h2><div class="formgrid"><div class="field"><label>Naam speler</label><input id="newPlayerName" placeholder="Naam speler"></div><div style="display:flex;align-items:flex-end"><button class="btn primary" onclick="addPlayer()">Toevoegen</button></div></div>
+ <div class="section"><h2>Huidige selectie</h2><ul class="playerlist">
+ ${db.players.map((p,i)=>`<li><span>${esc(p.name)}</span><button onclick="deletePlayer(${i})">Verwijderen</button></li>`).join('')||'<p class="empty">Nog geen spelers toegevoegd.</p>'}
+ </ul></div></div>`;
 }
-function history(){
- return `<div class="grid"><div class="card kpi"><div class="label">Trainingen opgeslagen</div><div class="value">${new Set(db.trainings.map(x=>x.date)).size}</div></div><div class="card kpi"><div class="label">Wedstrijden opgeslagen</div><div class="value">${new Set(db.matches.map(x=>x.date+'|'+x.opp)).size}</div></div></div>
- <div class="section card"><h2>Recente trainingen</h2><table class="table"><thead><tr><th>Datum</th><th>Speler</th><th>Status</th><th>Opmerking</th></tr></thead><tbody>${db.trainings.slice().reverse().slice(0,30).map(x=>`<tr><td>${x.date}</td><td>${esc(x.player)}</td><td>${esc(x.status)}</td><td>${esc(x.note)}</td></tr>`).join('')||'<tr><td colspan="4" class="empty">Nog geen trainingen.</td></tr>'}</tbody></table></div>
- <div class="section card"><h2>Recente wedstrijden</h2><table class="table"><thead><tr><th>Datum</th><th>Tegenstander</th><th>Speler</th><th>Status</th><th>Min.</th><th>G/A</th></tr></thead><tbody>${db.matches.slice().reverse().slice(0,30).map(x=>`<tr><td>${x.date}</td><td>${esc(x.opp)}</td><td>${esc(x.player)}</td><td>${x.status}</td><td>${x.minutes}</td><td>${x.goals}/${x.assists}</td></tr>`).join('')||'<tr><td colspan="6" class="empty">Nog geen wedstrijden.</td></tr>'}</tbody></table></div>`;
+
+function historyTab(){
+ const dates = [...new Set([...db.trainings.map(t=>t.date), ...db.matches.map(m=>m.date)])].sort().reverse();
+ if(!dates.length) return `<div class="card"><p class="empty">Hier verschijnen opgeslagen trainingen en wedstrijden zodra je die invoert.</p></div>`;
+
+ return dates.map(d=>{
+  const tr = db.trainings.filter(t=>t.date===d);
+  const ms = db.matches.filter(m=>m.date===d);
+  let block = '';
+  if(tr.length){
+   block += `<div class="histblock"><h3>Training — ${d}</h3><div class="sub">${tr.length} speler(s) geregistreerd</div>
+   <div class="tablewrap"><table class="table"><thead><tr><th>Speler</th><th>Status</th><th>Opmerking</th></tr></thead><tbody>
+   ${tr.map(t=>`<tr><td>${esc(t.player)}</td><td>${esc(t.status)}</td><td>${esc(t.note||'')}</td></tr>`).join('')}
+   </tbody></table></div>
+   <button onclick="deleteTraining('${d}')">Training van ${d} verwijderen</button></div>`;
+  }
+  if(ms.length){
+   const opp = ms[0].opponent ? ' vs ' + esc(ms[0].opponent) : '';
+   const comp = ms[0].competition ? ' (' + esc(ms[0].competition) + ')' : '';
+   block += `<div class="histblock"><h3>Wedstrijd — ${d}${opp}${comp}</h3><div class="sub">${ms.length} speler(s) geregistreerd</div>
+   <div class="tablewrap"><table class="table"><thead><tr><th>Speler</th><th>Status</th><th>Min.</th><th>Goals</th><th>Assists</th><th>Geel</th><th>Rood</th></tr></thead><tbody>
+   ${ms.map(m=>`<tr><td>${esc(m.player)}</td><td>${esc(m.status)}</td><td>${m.minutes}</td><td>${m.goals}</td><td>${m.assists}</td><td>${m.yellow}</td><td>${m.red}</td></tr>`).join('')}
+   </tbody></table></div>
+   <button onclick="deleteMatch('${d}')">Wedstrijd van ${d} verwijderen</button></div>`;
+  }
+  return block;
+ }).join('');
 }
-function render(tab='dashboard'){
- document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
- const titles={dashboard:['Dashboard','Overzicht van je U16-selectie'],training:['Training invoeren','Vaste invoer — opslaan en automatisch optellen'],match:['Wedstrijd invoeren','Vaste invoer — statistieken automatisch bijwerken'],players:['Spelers','Je selectie beheren'],history:['Historie','Alles wat eerder is opgeslagen']};
- document.getElementById('pageTitle').textContent=titles[tab][0];document.getElementById('pageSub').textContent=titles[tab][1];
- document.getElementById('content').innerHTML={dashboard,training,match,players,history}[tab]();
- window.currentTab=tab;
+
+function addPlayer(){
+ const input = document.getElementById('newPlayerName');
+ const name = input.value.trim();
+ if(!name) return;
+ if(db.players.some(p=>p.name.toLowerCase()===name.toLowerCase())){
+  alert('Deze speler staat al in de selectie.');
+  return;
+ }
+ db.players.push({name});
+ input.value='';
+ save();
 }
-document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>render(b.dataset.tab));
-function addPlayer(){let n=document.getElementById('newPlayer').value.trim();if(!n)return alert('Vul een naam in.');if(db.players.some(p=>p.name.toLowerCase()===n.toLowerCase()))return alert('Deze speler bestaat al.');db.players.push({name:n,position:'Middenvelder'});save();render('players')}
-function removePlayer(i){if(confirm('Speler verwijderen? Historische gegevens blijven bestaan.')){db.players.splice(i,1);save();render('players')}}
-function saveTraining(){let date=document.getElementById('trDate').value;if(!date)return alert('Kies een datum.');db.players.forEach((p,i)=>db.trainings.push({date,player:p.name,status:document.getElementById('trStatus'+i).value,note:document.getElementById('trNote'+i).value}));save();alert('Training opgeslagen. De aanwezigheid is direct bijgewerkt.');render('training')}
-function saveMatch(){let date=document.getElementById('mDate').value,opp=document.getElementById('mOpp').value.trim();if(!date||!opp)return alert('Vul datum en tegenstander in.');db.players.forEach((p,i)=>db.matches.push({date,opp,player:p.name,status:document.getElementById('mStatus'+i).value,minutes:+document.getElementById('mMin'+i).value||0,goals:+document.getElementById('mGoals'+i).value||0,assists:+document.getElementById('mAssists'+i).value||0,yellow:+document.getElementById('mYellow'+i).value||0,red:+document.getElementById('mRed'+i).value||0}));save();alert('Wedstrijd opgeslagen. Alle spelerstatistieken zijn bijgewerkt.');render('match')}
-function exportData(){let blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='U16-backup.json';a.click();URL.revokeObjectURL(a.href)}
-function resetAll(){if(confirm('Alles verwijderen? Dit kan niet ongedaan worden gemaakt.')){localStorage.removeItem(KEY);db={players:[],trainings:[],matches:[]};render()}}
-render();
+
+function deletePlayer(i){
+ if(!confirm("Speler verwijderen? De historie van deze speler blijft bewaard.")) return;
+ db.players.splice(i,1);
+ save();
+}
+
+function saveTraining(){
+ if(!db.players.length){ alert('Voeg eerst spelers toe.'); return; }
+ const date = document.getElementById('trDate').value;
+ if(!date){ alert('Kies een datum.'); return; }
+
+ // Verwijder eventuele eerdere invoer voor deze datum, zodat er geen dubbele records ontstaan
+ db.trainings = db.trainings.filter(t=>t.date!==date);
+
+ db.players.forEach((p,i)=>{
+  const status = document.getElementById('trStatus'+i).value;
+  const note = document.getElementById('trNote'+i).value.trim();
+  db.trainings.push({date, player:p.name, status, note});
+ });
+
+ save();
+ alert('Training van '+date+' opgeslagen.');
+}
+
+function saveMatch(){
+ if(!db.players.length){ alert('Voeg eerst spelers toe.'); return; }
+ const date = document.getElementById('mDate').value;
+ if(!date){ alert('Kies een datum.'); return; }
+ const opponent = document.getElementById('mOpponent').value.trim();
+ const competition = document.getElementById('mComp').value.trim();
+
+ // Verwijder eventuele eerdere invoer voor deze datum, zodat er geen dubbele records ontstaan
+ db.matches = db.matches.filter(m=>m.date!==date);
+
+ db.players.forEach((p,i)=>{
+  const status = document.getElementById('mStatus'+i).value;
+  const minutes = +document.getElementById('mMin'+i).value || 0;
+  const goals = +document.getElementById('mG'+i).value || 0;
+  const assists = +document.getElementById('mA'+i).value || 0;
+  const yellow = +document.getElementById('mY'+i).value || 0;
+  const red = +document.getElementById('mR'+i).value || 0;
+  db.matches.push({date, opponent, competition, player:p.name, status, minutes, goals, assists, yellow, red});
+ });
+
+ save();
+ alert('Wedstrijd van '+date+' opgeslagen.');
+}
+
+function deleteTraining(date){
+ if(!confirm('Training van '+date+' verwijderen?')) return;
+ db.trainings = db.trainings.filter(t=>t.date!==date);
+ save();
+}
+
+function deleteMatch(date){
+ if(!confirm('Wedstrijd van '+date+' verwijderen?')) return;
+ db.matches = db.matches.filter(m=>m.date!==date);
+ save();
+}
+
+function exportData(){
+ const blob = new Blob([JSON.stringify(db, null, 2)], {type:'application/json'});
+ const url = URL.createObjectURL(blob);
+ const a = document.createElement('a');
+ a.href = url;
+ a.download = 'u16-trainer-backup-'+new Date().toISOString().slice(0,10)+'.json';
+ document.body.appendChild(a);
+ a.click();
+ a.remove();
+ URL.revokeObjectURL(url);
+}
+
+function resetAll(){
+ if(confirm("Weet je zeker dat je alle data wilt wissen? Dit kan niet ongedaan gemaakt worden.")) {
+  db = {players:[], trainings:[], matches:[]};
+  save();
+ }
+}
+
+// Start de app op het dashboard
+switchTab('dashboard');
 </script>
 </body>
 </html>
